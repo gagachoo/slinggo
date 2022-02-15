@@ -1,38 +1,76 @@
 body{
-	background-color: #D4E6B3;
+	background-color: #FFFFE0;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+
+
+
+
+/* меню */
+
+.menu {
+	text-align: center;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap&subset=cyrillic');
+* {
     padding: 0;
-    overflow: hidden;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-
-.search {
+.button {
+    color: #232323;
+    background: transparent;
+    border: 1px solid #232323;
+    position: relative;
+    font-size: 14px;
+    letter-spacing: .3em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 32px 15px 17px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+.button:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
+    background: #7BA7AB; /*цвет кнопки*/
+    z-index: -1;
+    transition: .25s ease;
+    transform: translate(0, 0);
+}
+.button:hover:before {
+    transform: translate(4px, 4px);
 }
 
+
+
+
+
+
+/* Поиск */
 
 
 
 * {box-sizing: border-box;}
+body {margin: 0;}
+div {padding: 30px 0}
 form {
   position: relative;
   width: 500px;
   margin: 0 auto;
-}
-input {
+	}
+
+
+.d1 input {
   width: 100%;
   height: 42px;
   padding-left: 10px;
@@ -41,8 +79,9 @@ input {
   outline: none;
   background: #F9F0DA;
   color: #9E9C9C;
+
 }
-button {
+.d1 button {
   position: absolute;
   top: 0;
   right: 0px;
@@ -53,56 +92,17 @@ button {
   border-radius: 0 5px 5px 0;
   cursor: pointer;
 }
-button:before {
+.d1 button:before {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 16px;
   color: #F9F0DA;
-}s
+}
 
-
-
-
-
-@import url(https://fonts.googleapis.com/css?family=Lora);
-body {margin:0;}
-h2 {
-  font-family: monospace;
-  color: #7BA7AB;
+body, html {
+  height: 80%;
+  display: grid;
 }
-ul {
-  list-style: none;
-  margin: 0 auto;
-}
-a {
-  text-decoration: none;
-  font-family: 'Lora', serif;
-  transition: .5s linear;
-}
-i {
-  margin-right: 10px;
-}
-nav {
-  display: block;
-  width: 660px;
-  margin: 0 auto 30px;
-}
-.one ul {
-  padding: 1em 0;
-  background: #F9F0DA;
-}
-.one a {
-  padding: 1em;
-  background: rgba(177, 152, 145, .3);
-  border-right: 1px solid #7BA7AB;
-  color: #695753;
-}
-.one a:hover {background: #7BA7AB;}
-.one li {
-  display: inline;
-}
-.one {
-    align-items: top;
-    justify-content: center;
-    overflow: auto;
+.d1 {
+  margin: auto;
 }
