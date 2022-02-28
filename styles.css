@@ -103,3 +103,19 @@ body, html {
 .d1 {
   margin: auto;
 }
+
+
+
+
+
+.top-link{
+	cursor:pointer; /* изменяем указатель мыши при наведении на блок */
+	display:none; /* скрываем блок с кнопкой, т.к. отображать надо только при прокрутке */
+	position:fixed; /* фиксируем расположение */
+	left:0px;
+	top:0px;
+	padding:0;
+}
+.top-link a{
+	display:block;
+}
