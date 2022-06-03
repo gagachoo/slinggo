@@ -1,7 +1,8 @@
+/* цвет фона */
 body{
 	background-color: #D4E6B3;
 }
-
+/* сделать невозможным скролл */
 html, body {
     width: 100%;
     height: 100%;
@@ -9,8 +10,7 @@ html, body {
     padding: 0;
     overflow: hidden;
 }
-
-
+/* поиск по середине */
 .search {
     width: 100%;
     height: 100%;
@@ -22,10 +22,7 @@ html, body {
     justify-content: center;
     overflow: auto;
 }
-
-
-
-
+/* как выглядит поиск */
 * {box-sizing: border-box;}
 form {
   position: relative;
@@ -57,52 +54,86 @@ button:before {
   content: "\f002";
   font-family: FontAwesome;
   font-size: 16px;
-  color: #F9F0DA;
+  color: #F9F0DA; /*цвет внутри поиска*/
 }s
 
 
 
 
+/* меню */
+/* body {
+	margin: 0;
+	padding: 0;
+}
 
-@import url(https://fonts.googleapis.com/css?family=Lora);
-body {margin:0;}
-h2 {
-  font-family: monospace;
-  color: #7BA7AB;
+.nav {
+	text-align: center;
 }
-ul {
-  list-style: none;
-  margin: 0 auto;
+
+.main-menu {
+	width: 1000px;
+	list-style: none;
+	padding: 0;
+	font-size: 24px;
+	margin: 0 auto;
+	list-style-type: none;
 }
-a {
-  text-decoration: none;
-  font-family: 'Lora', serif;
-  transition: .5s linear;
+
+.main-menu li {
+	display: inline-block;
+	padding: 0;
+	margin-top: 2%;
+	margin-right: -6px;
+	font-family: roboto serif;
 }
-i {
-  margin-right: 10px;
+
+.main-menu a {
+	color: #7BA7AB; /*цвет букв*/
+	/* text-decoration: none;
+	padding: 10px;
+	margin: 0;
+	outline: none;
 }
-nav {
-  display: block;
-  width: 660px;
-  margin: 0 auto 30px;
+
+.main-menu a:hover {
+	background: #2b2b2b;
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap&subset=cyrillic');
+* {
+    padding: 0;
+    box-sizing: border-box;
 }
-.one ul {
-  padding: 1em 0;
-  background: #F9F0DA;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
-.one a {
-  padding: 1em;
-  background: rgba(177, 152, 145, .3);
-  border-right: 1px solid #7BA7AB;
-  color: #695753;
+
+
+
+.button-1 {
+    color: #232323;
+    background: transparent;
+    border: 1px solid #232323;
+    position: sticky;
+    font-size: 14px;
+    letter-spacing: .3em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 17px 34px 17px 39px;
+    transition: .2s ease-in-out;
+    cursor: pointer;
 }
-.one a:hover {background: #7BA7AB;}
-.one li {
-  display: inline;
+.button-1:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+    background: #32D4E2;
+    z-index: -1;
+    transition: .25s ease;
+    transform: translate(0, 0);
 }
-.one {
-    align-items: top;
-    justify-content: center;
-    overflow: auto;
+.button-1:hover:before {
+    transform: translate(4px, 4px);
 }
